@@ -20,6 +20,18 @@ const THEME_COLORS = [
   { pipe: '#0891b2', accent: '#22d3ee' },
 ];
 
+/**
+ * @typedef {Object} GameCanvasProps
+ * @property {string | null} playerImage
+ * @property {(score: number) => void} onScoreChange
+ * @property {(score: number) => void} onGameOver
+ * @property {boolean} isPlaying
+ * @property {boolean} isPaused
+ */
+
+/**
+ * @type {import('react').ForwardRefExoticComponent<GameCanvasProps & import('react').RefAttributes<any>>}
+ */
 export const GameCanvas = forwardRef(function GameCanvas({ 
   playerImage, 
   onScoreChange, 
